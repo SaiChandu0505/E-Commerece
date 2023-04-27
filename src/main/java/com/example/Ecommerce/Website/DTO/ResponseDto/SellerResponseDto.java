@@ -1,17 +1,15 @@
 package com.example.Ecommerce.Website.DTO.ResponseDto;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@FieldDefaults(level= AccessLevel.PRIVATE)
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@Builder
 public class SellerResponseDto {
-
-    private String name ;
-    private int age;
+    String name;
+    int age;
 }

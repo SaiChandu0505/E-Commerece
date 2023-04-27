@@ -9,7 +9,7 @@ public class ProductTransformer {
     public static Product ProductRequestDtoToProduct(ProductRequestDto productRequestDto){
 
         return Product.builder()
-                .productName(productRequestDto.getProductName())
+                .name(productRequestDto.getProductName())
                 .price(productRequestDto.getPrice())
                 .productCategory(productRequestDto.getProductCategory())
                 .quantity(productRequestDto.getQuantity())
@@ -19,7 +19,7 @@ public class ProductTransformer {
 
     public static ProductResponseDto ProductToProductResponseDto(Product product){
         return ProductResponseDto.builder()
-                .productName(product.getProductName())
+                .productName(product.getName())
                 .sellerName(product.getSeller().getName())
                 .quantity(product.getQuantity())
                 .productStatus(product.getProductStatus())

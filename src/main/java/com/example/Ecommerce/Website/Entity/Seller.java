@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "seller")
+@Table(name="seller")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
 public class Seller {
@@ -20,14 +20,12 @@ public class Seller {
     int id;
 
     String name;
-
-    @Column(unique = true)
-    String emailid;
-
-    Integer age;
-
+    int age;
     String mobNo;
+    @Column(unique = true)
+    String emailId;
 
     @OneToMany(mappedBy = "seller",cascade = CascadeType.ALL)
-    List<Product> products = new ArrayList<>();
+    List<Product>products=new ArrayList<>();
+
 }

@@ -1,20 +1,19 @@
 package com.example.Ecommerce.Website.DTO.ResponseDto;
 
-import com.example.Ecommerce.Website.Enum.CardType;
+
+
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class CardResponseDto {
+public class ItemResponseDto {
 
-    String cardNumber;
-    String customerName;
-    Date expiryDate;
-    CardType cardType;
+    String productName;
+    int quantity;
+    int priceOfItem;
+    int totalPrice;
 }

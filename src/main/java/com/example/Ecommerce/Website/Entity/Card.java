@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "card")
+@Table(name="card")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
 public class Card {
@@ -20,8 +20,8 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    @Column(unique = true,nullable = false)
-    String cardNo;
+    @Column(unique = true, nullable = false)
+    String cardNumber;
 
     int cvv;
 
@@ -33,4 +33,5 @@ public class Card {
     @ManyToOne
     @JoinColumn
     Customer customer;
+
 }
